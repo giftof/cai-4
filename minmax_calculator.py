@@ -15,7 +15,7 @@ def to_float(number: str) -> float:
         if parsed in constants:
             return constants[parsed]
         if parsed == 'nan':
-            raise ValueError('[nan means Not A Number]')
+            raise ValueError('[NaN is short for Not A Number]')
         return float(number.strip().lower())
     except ValueError as desc:
         raise ValueError(f'Invalid input: {number} {desc}')
